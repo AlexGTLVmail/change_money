@@ -1,0 +1,772 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+/* Подключение шрифтов */
+@font-face {
+    font-family: 'Unbonded';
+    src: url('fonts/Unbonded.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Semi Bold';
+    src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('fonts/Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Unbounded-Bold';
+    src: url('fonts/Unbounded-Bold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+
+/* Переменные CSS */
+:root {
+    --primary-color: #90c837;
+    --secondary-color: #5a9e00;
+    --gradient-start: #b4e841;
+    --gradient-end: #5ca403;
+    --font-size-large: 4rem;
+    --font-size-medium: 1.5rem;
+    --font-size-small: 1rem;
+    --header-height: 7.875rem; /* 126px в rem */
+    --banner-height: 5.9375rem; /* 95px в rem */
+    --additional-block-height: 4.0625rem; /* 65px в rem */
+    --header-width: 71.9375rem; /* 1151px в rem */
+}
+
+/* Глобальные стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Предотвращает горизонтальную прокрутку */
+}
+
+/* Баннер */
+.promo-banner {
+    width: 100%;
+    height: 95px;
+    background: rgb(172,196,60);
+    background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.625rem; /* 10px в rem */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--header-width);
+}
+
+.promo-column {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    white-space: nowrap; /* Предотвращает перенос текста */
+    flex-shrink: 0;
+}
+
+.promo-column-1 {
+    font-family: 'Unbounded-Bold', sans-serif;
+    font-size: clamp(50px, 6vw, 80px); /* var(--font-size-large)*/
+    color: #fff343;
+    text-align: left;
+    margin-right: 0.125rem; /* 10px в rem */
+}
+
+.promo-column-2 {
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(10px, 2.4vw, 29px);/* var(--font-size-medium) */
+    text-align: left;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-right: 0.125rem; /* 10px в rem */
+}
+
+.promo-column-4 {
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(10px, 2.4vw, 29px);
+    text-align: right;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-right:0rem;
+}
+
+.promo-column-3 {
+    display: flex;
+    align-items: center;
+}
+
+.promo-column-3 img {
+    height: clamp(10px, 5.5vw, 60px); /* 60px в rem */
+    width: auto;
+}
+
+
+
+
+/* Дополнительный блок 
+.additional-block {
+    width: 100%;
+    height: 63px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.additional-content {
+    display: flex;
+    align-items: stretch; 
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1150px;
+}
+
+.additional-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 15px;
+    line-height: 1rem;
+    box-sizing: border-box;
+    white-space: nowrap; 
+    flex: 1 1 auto; 
+    padding: 0 1rem; 
+    }
+
+.phone-column {
+    background-color: #f0f0f0;
+    flex: 0 1 auto; 
+    padding-right: 12rem; 
+    padding-top: 1.3rem;
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(10px, 3vw, 37px);
+}
+
+.gradient-column {
+    background: rgb(172,196,60);
+    background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
+}
+
+.additional-column .icon {
+    height: clamp(10px, 3vw, 46px);
+    margin-right: 1.125rem; 
+    padding-top: 0.8rem;
+    padding-bottom: 1rem;
+}
+
+.additional-column-2 {
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(3px, 1.5vw, 15px);
+    text-align: center;
+    padding-right: 4rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+    margin-left: -11rem;
+    line-height: 1.2;
+}
+
+.additional-column-3 {
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(3px, 1.5vw, 15px);
+    text-align: center;
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.additional-column-4 {
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(3px, 1.5vw, 15px)
+    text-align: center;
+    padding-top: 1.2rem;
+    padding-bottom: 1rem;
+    line-height: 1.2;
+}*/
+
+/* Шапка сайта */
+.header {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+   
+    box-shadow: none;
+}
+
+.header-container {
+    width: var(--header-width);
+    height: 126px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.logo img {
+    width: 100%;
+    height: clamp(110px, 10vw, 125px);/*  8rem*/
+    transition: all 0.3s ease; /* Плавное изменение размера логотипа */
+    margin-left: 0%;
+    margin-top: 3rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 2rem;
+    margin-right: -1rem;
+}
+
+.menu-row {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.menu-row a {
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(5px, 2vw, 25px);
+    /*font-size: var(--font-size-small);*/
+    line-height: 3rem;
+    text-decoration: none;
+    color: #000000;
+    margin-left: 1.25rem; /* 20px в rem */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.menu-row a:hover {
+    color: var(--secondary-color);
+}
+
+/* Новый контейнер для "Финансовая Аналитика" */
+.analytics-container {
+    width: 100%;
+    max-width: 71.9375rem; /* 1151px в rem */
+    margin: 0 auto;
+    padding: 2rem 0; /* Отступы сверху и снизу */
+    text-align: center;
+}
+
+.analytics-title {
+    /* font-size: 3.92rem;*/
+    font-size: clamp(2rem, 5vw, 3.85rem);
+    font-family: 'Unbounded-Bold', sans-serif;
+    white-space: nowrap; 
+    background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
+    
+    /*linear-gradient(135deg, #ffe100, #5ca403);*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0rem;
+    margin-bottom: 1.5rem;
+}
+
+.analytics-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* Адаптивность */
+.analytics-video {
+    position: relative;
+    width: 950px; /* Фиксированная ширина */
+    margin: 0 auto; /* Центрирование блока */
+    overflow: hidden;
+    background: #000;
+    border-radius: 15px; /* Скругление углов */
+}
+
+.analytics-video video {
+    width: 100%; /* Растягиваем видео на всю ширину контейнера */
+    height: auto; /* Сохраняем соотношение сторон видео */
+    border-radius: 15px; /* Скругление углов видео */
+}
+
+/* Для видео через YOUTUBE
+.analytics-video {
+    position: relative;
+    width: 950px; 
+    margin: 0 auto; 
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    background: #000;
+    border-radius: 15px; 
+}
+.analytics-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px; 
+}
+*/
+
+/*
+/* basic queries */
+.bubble {
+	height: 110px;
+	width: 100%;
+	min-width: 200px;
+	display: block;
+	margin-top: -5px;
+	text-align: center;
+	background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
+    z-index: -1;
+    white-space: nowrap; /* Запрещаем перенос текста */
+     }
+.pointer {
+	height: 60px;
+	width: 60px;
+	margin: 0 auto;
+	transform: rotate(45deg);
+	border-radius: 0 0 12px 0;
+	margin-top: -40px;
+	position: relative;
+	left: calc(0.5vw - 9px); 
+	background: #abc43c;
+	z-index:-1;
+}
+.basic-title h3{
+    /* font-size: 3.92rem;*/
+    font-size: 10px;
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    white-space: nowrap; 
+    color: #000;
+/*linear-gradient(135deg, #ffe100, #5ca403);*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0rem;
+    margin-bottom: 1.5rem;
+    background-image: url("imgs/logograf.png");
+    z-index: 1;
+}
+.logograf1 img {
+    width: 100%;
+    height: 10px;/*  8rem*/
+    transition: all 0.3s ease; /* Плавное изменение размера логотипа */
+    margin-left: 0%;
+    margin-top: 3rem;
+}
+
+
+.custom-block {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1151px; /* фиксированная ширина, можно изменить если нужно */
+    margin: 0 auto; /* центрирование блока на странице */
+    padding: 0 10px; /* отступы по бокам */
+    box-sizing: border-box;
+   }
+
+.left-logo {
+    height: 100%; /* логотип занимает всю высоту блока */
+    width: auto; /* сохранение соотношения сторон */
+    
+}
+
+.block-text {
+    font-family: 'Montserrat-ExtraBold', sans-serif;
+    font-size: clamp(5px, 3vw, 40px);
+    color: #000;
+    text-align: center;
+    flex-grow: 1; /* текст занимает доступное пространство между логотипами */
+    padding-top:6px;
+}
+
+.right-logo {
+    height: 100%; /* логотип занимает всю высоту блока */
+    width: auto; /* сохранение соотношения сторон */
+    padding-top: 2px;
+   
+}
+
+
+
+
+/* КАРТИНКИ */
+.block-analytics-container {
+    height: 100%;
+    width: 100%;
+    max-width: 71.9375rem; /* 1151px в rem */
+    margin: 0 auto;
+    padding: 2rem 0; /* Отступы сверху и снизу */
+    text-align: center;
+    position: relative;
+}
+
+.block-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.text-block {
+    max-width: 50%;
+    color: #2e2e2e;
+    font-size: 2em;
+    line-height: 1.5em;
+    text-align: left;
+}
+.highlight {
+    font-family: 'Unbonded', sans-serif;
+    width: 110%;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-family: 'Unbounded-Bold', sans-serif;
+    white-space: nowrap; 
+    background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    
+}
+.image-block {
+    position: relative;
+    max-width: 45%;
+    z-index:1;
+    margin-top: -100px;
+}
+.image-block img {
+    width: 85%;
+    border-radius: 5px;
+    margin-top: -20px;
+}
+.cta-button {
+    position: absolute;
+    display: block;
+    background-color: #93c01f;
+    color: #fff;
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: -10px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 2;
+    line-height:1.5;
+}
+
+.grand
+{
+    font-size: 0.9em;
+}
+
+.small
+{
+    font-size: 0.75em;
+}
+
+
+.text-one {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-left: -20px;
+    margin-bottom: 0;/* задать отступы снизу */
+}
+.custom-block-qsign {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1151px; /* фиксированная ширина, можно изменить если нужно */
+    margin: 0 auto; /* центрирование блока на странице */
+    padding: 0 10px; /* отступы по бокам */
+    box-sizing: border-box;
+    margin-bottom: 3rem;
+   }
+.qsign {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+.qsign img {
+    height: clamp(50px, 10vw, 60px);
+    transition: all 0.3s ease; /* Плавное изменение размера логотипа */
+    margin-left: 1rem;
+    margin-top: 0.1rem;
+}
+.qsignbig {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+.qsignbig img {
+    height: clamp(50px, 10vw, 90px);
+    transition: all 0.3s ease; /* Плавное изменение размера логотипа */
+    margin-left: 0%;
+    margin-top: -1px;
+    margin-left: 2.5rem;
+}
+
+.m-row-one  {
+    width: 100%;
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    /*font-size: var(--font-size-small);*/
+    text-decoration: none;
+    color: #000000;
+    margin-left: 1.25rem; /* 20px в rem */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Запрещаем перенос текста */
+    text-align: left;
+    margin-right: 10px;
+    line-height:1.3;
+}
+.block-text-highlight {
+    font-family: 'Montserrat-ExtraBold', sans-serif;
+    font-size: clamp(5px, 3vw, 25px);
+    color: #000;
+    text-align: center;
+    flex-grow: 1; /* текст занимает доступное пространство между логотипами */
+    padding-top:7px;
+    line-height:1.3;
+}
+
+/* ТЕКСТ В КНОПКЕ В ОСНОВНЫХ ЗАПРОСАХ */
+.button-big{
+    font-family: 'Unbonded', sans-serif;
+    font-size: clamp(5px, 3vw, 25px);
+    color: #ffffff;
+    text-align: center;
+    flex-grow: 1; /* текст занимает доступное пространство между логотипами */
+}
+.button-small{
+    font-family: 'Unbonded', sans-serif;
+    font-size: clamp(5px, 3vw, 15px);
+    color: #000000;
+    text-align: center;
+    flex-grow: 1; /* текст занимает доступное пространство между логотипами */
+}
+
+
+/* Кнопки"ЧТО ВЫ ПОЛУЧИТЕ" */
+.get-block-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.get-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.get-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 4rem;
+    padding: 20px;
+    margin-right: 50px; ;
+    margin-left: 50px;
+    font-size: 1.5em;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #56ab2f, #a8e063); /* Задаем градиент */
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.get-box img{
+position: absolute;
+right: 0;
+margin-right: 5%;
+
+}
+
+.get-box:hover {
+    background: linear-gradient(45deg, #4ca2af, #c4e0e5); /* Градиент при наведении */
+}
+.get-grand /* ШРИФТЫ КНОПОК */
+{
+    font-size: 0.9em;
+    padding-left: 10%;
+    
+}
+.get-box img{
+position: absolute;
+right: 0;
+margin-right: 5%;
+width: clamp(40px, 3vw, 86px);
+}
+
+
+/*.get-analytics-container {
+
+    width: 100%;
+    max-width: 71.9375rem; 
+    padding: 2rem 0; 
+    text-align: center;
+   }*/
+
+   .get {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+    box-shadow: none;
+}
+
+.get-container {
+    width: var(--header-width);
+    height: 126px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+.get-block {
+    background-color: #93c01f;
+    color: #fff;
+    width: 40%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 2;
+    line-height:1.5;
+}
+
+
+.new-additional-block {
+    width: 100%;
+    height: 63px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Убираем прокрутку и скрываем вылезающее содержимое */
+     
+}
+
+.new-additional {               /* container */
+    display: flex;
+    width: 1151px;
+    justify-content: center;
+    margin-top: 25px;
+    height: 100%;
+
+    
+    align-items: center;
+    padding: 0 ;
+    
+}
+
+
+.add{         
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(2px, 1.5vw, 15px);
+    align-items: center;
+    display: flex;
+    line-height: 1.2;
+    margin-top: -25px;
+    height: 100%;
+    text-decoration: none;
+    color: #000;
+    background: rgb(172,196,60);
+    background: linear-gradient(27deg, rgba(172,196,60,1) 26%, rgba(108,169,71,1) 71%);
+    width: 23%;
+    white-space: nowrap;
+}
+.add:hover{
+background: #4ca2af;
+}
+
+.addphone{  
+    background: #f0f0f0;
+    font-size: clamp(7px, 3vw, 37px);
+    width: 39%;
+}
+
+.addcall{
+    
+  
+} 
+.addacquaintance{
+    
+   
+}
+
+.addgetcomm{
+
+    
+}
+
+.add img{
+ 
+  
+display: inline-block;
+
+margin-right: 12px;
+margin-left: 15px;
+margin-top: 0px; /* Отступ между картинкой и текстом */
+height: clamp(10px, 3vw, 46px); /* Размер иконки */
+
+}
+
+.addtext{
+    
+    display: inline-block;
+    text-align: center;
+    padding:  10px;
+
+}
+
+
+
+
+
