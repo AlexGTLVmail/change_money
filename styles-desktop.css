@@ -5,6 +5,19 @@
 }
 
 /* Подключение шрифтов */
+
+
+.montserrat-uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+
+
+
 @font-face {
     font-family: 'Unbonded';
     src: url('fonts/Unbonded.ttf') format('truetype');
@@ -91,7 +104,7 @@ body {
 }
 
 .promo-column-2 {
-    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: clamp(10px, 2.4vw, 29px);/* var(--font-size-medium) */
     text-align: left;
     line-height: 1.2;
@@ -165,7 +178,7 @@ body {
 }
 
 .menu-row a {
-    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: clamp(5px, 2vw, 25px);
     /*font-size: var(--font-size-small);*/
     line-height: 3rem;
