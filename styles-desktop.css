@@ -7,13 +7,12 @@
 /* Подключение шрифтов */
 
 
-.montserrat-uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
-
+.montserrat-uniquifier {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
 
 
 
@@ -59,7 +58,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     overflow-x: hidden; /* Предотвращает горизонтальную прокрутку */
 }
@@ -113,7 +112,7 @@ body {
 }
 
 .promo-column-4 {
-    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: clamp(10px, 2.4vw, 29px);
     text-align: right;
     line-height: 1.2;
