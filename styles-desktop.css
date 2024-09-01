@@ -55,8 +55,8 @@ body {
 .promo-banner {
     width: 100%;
     height: 95px;
-    background: rgb(172,196,60);
-    background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
+    background: rgb(163,198,38);
+    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,93 +118,6 @@ body {
     width: auto;
 }
 
-
-
-
-/* Дополнительный блок 
-.additional-block {
-    width: 100%;
-    height: 63px;
-    background: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    overflow: hidden; 
-}
-
-.additional-content {
-    display: flex;
-    align-items: stretch; 
-    justify-content: space-between;
-    padding: 0;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 1150px;
-}
-
-.additional-column {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    font-size: 15px;
-    line-height: 1rem;
-    box-sizing: border-box;
-    white-space: nowrap; 
-    flex: 1 1 auto; 
-    padding: 0 1rem; 
-    }
-
-.phone-column {
-    background-color: #f0f0f0;
-    flex: 0 1 auto; 
-    padding-right: 12rem; 
-    padding-top: 1.3rem;
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(10px, 3vw, 37px);
-}
-
-.gradient-column {
-    background: rgb(172,196,60);
-    background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
-}
-
-.additional-column .icon {
-    height: clamp(10px, 3vw, 46px);
-    margin-right: 1.125rem; 
-    padding-top: 0.8rem;
-    padding-bottom: 1rem;
-}
-
-.additional-column-2 {
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(3px, 1.5vw, 15px);
-    text-align: center;
-    padding-right: 4rem;
-    padding-top: 1.3rem;
-    padding-bottom: 1rem;
-    margin-left: -11rem;
-    line-height: 1.2;
-}
-
-.additional-column-3 {
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(3px, 1.5vw, 15px);
-    text-align: center;
-    padding-top: 1.3rem;
-    padding-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.additional-column-4 {
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(3px, 1.5vw, 15px)
-    text-align: center;
-    padding-top: 1.2rem;
-    padding-bottom: 1rem;
-    line-height: 1.2;
-}*/
 
 /* Шапка сайта */
 .header {
@@ -281,7 +194,8 @@ body {
     font-size: clamp(2rem, 5vw, 3.85rem);
     font-family: 'Unbounded-Bold', sans-serif;
     white-space: nowrap; 
-    background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
+    background: rgb(163,198,38);
+    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
     
     /*linear-gradient(135deg, #ffe100, #5ca403);*/
     -webkit-background-clip: text;
@@ -333,8 +247,46 @@ body {
     border-radius: 15px; 
 }
 */
+.basic-queries{
+    position: relative;
+    z-index: 1;
+}
 
-/*
+.bubble-gum {
+    display: flex;
+width: 100%;
+max-height: 20px;
+padding-top: 8.37%;
+position: relative;
+     }
+.bubble1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(163,198,38);
+    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
+    max-height:110px;
+
+}
+    .pointer1 {
+    
+        height: clamp(30px, 5vw, 50px);
+        width: clamp(30px, 5vw, 50px);
+        display: block;
+        transform: rotate(45deg);
+        border-radius: 0 0 12px 0;
+        margin-top:clamp(-30px, 3vw, -45px);
+        position: absolute;
+        left: 48.5%;
+        margin-right: -50%;
+        background: #86bb13;
+        z-index:-1;
+        
+    }
+
+
 /* basic queries */
 .bubble {
 	height: 110px;
@@ -343,9 +295,11 @@ body {
 	display: block;
 	margin-top: -5px;
 	text-align: center;
-	background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
+    background: rgb(163,198,38);
+    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
     z-index: -1;
     white-space: nowrap; /* Запрещаем перенос текста */
+    margin-bottom: 50px;
      }
 .pointer {
 	height: 60px;
@@ -356,7 +310,7 @@ body {
 	margin-top: -40px;
 	position: relative;
 	left: calc(0.5vw - 9px); 
-	background: #abc43c;
+	background: #86bb13;
 	z-index:-1;
 }
 .basic-title h3{
@@ -383,7 +337,6 @@ body {
 
 
 .custom-block {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -392,13 +345,8 @@ body {
     margin: 0 auto; /* центрирование блока на странице */
     padding: 0 10px; /* отступы по бокам */
     box-sizing: border-box;
+    position: relative;
    }
-
-.left-logo {
-    height: 100%; /* логотип занимает всю высоту блока */
-    width: auto; /* сохранение соотношения сторон */
-    
-}
 
 .block-text {
     font-family: 'Montserrat-ExtraBold', sans-serif;
@@ -407,6 +355,12 @@ body {
     text-align: center;
     flex-grow: 1; /* текст занимает доступное пространство между логотипами */
     padding-top:6px;
+    z-index: 2;
+}
+.left-logo {
+    height: 100%; /* логотип занимает всю высоту блока */
+    width: auto; /* сохранение соотношения сторон */
+    
 }
 
 .right-logo {
@@ -420,15 +374,7 @@ body {
 
 
 /* КАРТИНКИ */
-.block-analytics-container {
-    height: 100%;
-    width: 100%;
-    max-width: 71.9375rem; /* 1151px в rem */
-    margin: 0 auto;
-    padding: 2rem 0; /* Отступы сверху и снизу */
-    text-align: center;
-    position: relative;
-}
+
 
 .block-container {
     display: flex;
@@ -449,7 +395,8 @@ body {
     font-size: clamp(2rem, 5vw, 3.4rem);
     font-family: 'Unbounded-Bold', sans-serif;
     white-space: nowrap; 
-    background: linear-gradient(3deg, rgba(172,196,60,1) 31%, rgba(119,174,69,1) 56%, rgba(108,169,71,1) 80%);
+    background: rgb(163,198,38);
+    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 0rem;
@@ -523,8 +470,8 @@ body {
 .qsign img {
     height: clamp(50px, 10vw, 60px);
     transition: all 0.3s ease; /* Плавное изменение размера логотипа */
-    margin-left: 1rem;
-    margin-top: 0.1rem;
+   
+    float: right;
 }
 .qsignbig {
     width: 100%;
@@ -536,6 +483,7 @@ body {
     margin-left: 0%;
     margin-top: -1px;
     margin-left: 2.5rem;
+    float: right;
 }
 
 .m-row-one  {
@@ -571,14 +519,14 @@ body {
 }
 .button-small{
     font-family: 'Unbonded', sans-serif;
-    font-size: clamp(5px, 3vw, 15px);
+    font-size: clamp(5px, 2vw, 15px);
     color: #000000;
     text-align: center;
     flex-grow: 1; /* текст занимает доступное пространство между логотипами */
 }
 
 
-/* Кнопки"ЧТО ВЫ ПОЛУЧИТЕ" */
+/* Кнопки"ЧТО ВЫ ПОЛУЧИТЕ" закомментирован Раскрыть*/
 .get-block-container {
     display: flex;
     align-items: center;
@@ -597,6 +545,7 @@ body {
 }
 
 .get-box {
+    font-family: 'Montserrat-ExtraBold', sans-serif;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -609,10 +558,13 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 10px;
-    background: linear-gradient(45deg, #56ab2f, #a8e063); /* Задаем градиент */
+    background: rgb(163,198,38);
+    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%); 
     transition: background 0.3s ease;
     position: relative;
+    line-height: 1.2;
 }
+
 
 .get-box img{
 position: absolute;
@@ -622,30 +574,37 @@ margin-right: 5%;
 }
 
 .get-box:hover {
-    background: linear-gradient(45deg, #4ca2af, #c4e0e5); /* Градиент при наведении */
+    background: linear-gradient(45deg, #4ca2af, #c4e0e5); 
 }
-.get-grand /* ШРИФТЫ КНОПОК */
+.get-grand 
 {
-    font-size: clamp(0.5rem, 2vw, 1.8rem);
+    font-size: clamp(0.8rem, 2vw, 1.8rem);
     padding-left: 10%;
-    
+    white-space: nowrap;   
+    text-align: left;
 }
+.get-small{
+    font-size: clamp(0.223rem, 1vw, 0.86rem);
+    white-space: nowrap;
+}
+    
 .get-box img{
 position: absolute;
 right: 0;
 margin-right: 5%;
-width: clamp(40px, 3vw, 86px);
+width: clamp(60px, 7vw, 86px);
 }
 
 
-/*.get-analytics-container {
 
-    width: 100%;
-    max-width: 71.9375rem; 
-    padding: 2rem 0; 
-    text-align: center;
-   }*/
 
+
+
+/**NeW CODe*/
+
+/**NeW CODe*/
+
+/*КНОПКА, НЕ ТРОГАТЬ!*/
    .get {
     width: 100%;
     background: #ffffff;
@@ -664,7 +623,8 @@ width: clamp(40px, 3vw, 86px);
     align-items: center;
     height: 100%;
     box-sizing: border-box;
-    padding: 0 1rem;
+   
+    margin-bottom: 50px;
 }
 .get-block {
     background-color: #93c01f;
@@ -680,7 +640,7 @@ width: clamp(40px, 3vw, 86px);
     line-height:1.5;
 }
 
-
+/*КНОПКА, НЕ ТРОГАТЬ!*/
 .new-additional-block {
     width: 100%;
     height: 63px;
@@ -717,8 +677,8 @@ width: clamp(40px, 3vw, 86px);
     height: 100%;
     text-decoration: none;
     color: #000;
-    background: rgb(172,196,60);
-    background: linear-gradient(27deg, rgba(172,196,60,1) 26%, rgba(108,169,71,1) 71%);
+    background: rgb(163,198,38);
+    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
     width: 23%;
     white-space: nowrap;
 }
@@ -769,4 +729,88 @@ height: clamp(10px, 3vw, 46px); /* Размер иконки */
 
 
 
+.block-analytics-container {
+    height: 100%;
+    width: 100%;
+    max-width: 71.9375rem; /* 1151px в rem */
+    margin: 0 auto;
+    padding: 2rem 0; /* Отступы сверху и снизу */
+    text-align: center;
+    position: relative;
+}
 
+
+
+
+
+
+.bubble-container {
+    display: flex;
+    width: 100%;
+    
+    position: relative;
+    margin-bottom:50px ;
+
+     }
+
+
+
+
+.image-bub-right {
+    width: 100%; /* Adjust width as needed */
+
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 10px; /* Optional padding */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Image wrapper to position the number */
+.image-wrapper3 {
+    position: relative; /* Allows absolute positioning of the number */
+}
+
+/* Image styling */
+.image3 {
+    width: 100%; /* Make the image fit the container's width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space/gap */
+}
+
+/* Number styling */
+.number3 {
+    position: absolute; /* Position the number relative to the image */
+    top: 50%; /* Center vertically */
+    left: 10%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact center alignment */
+    font-size: 40px; /* Adjust font size as needed */
+    color: white; /* Text color (adjust to contrast with image) */
+    font-weight: bold; /* Bold text */
+}
+
+/* Text styling */
+.text3 {
+    margin: 5px 0; /* Margin between text lines */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height for better readability */
+    color: #333; /* Text color */
+}
+
+
+
+.svg-playground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150%;
+    /*transform: scale(-1, 1); /* Отражение по горизонтали */
+    /*transform: translate(-150px);*/
+    height: 100%;
+    margin-top: -20%;
+    
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+   /* transform: scale(-1, 1); /* Отражение по горизонтали */
+}
