@@ -7,22 +7,22 @@
 /* Подключение шрифтов */
 @font-face {
     font-family: 'Unbonded';
-    src: url('/fonts/Unbonded.ttf') format('truetype');
+    src: url('fonts/Unbonded.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Montserrat Semi Bold';
-    src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+    src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
     font-weight: 600;
 }
 @font-face {
     font-family: 'Montserrat-ExtraBold';
-    src: url('/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+    src: url('fonts/Montserrat-ExtraBold.ttf') format('truetype');
     font-weight: 600;
 }
 @font-face {
     font-family: 'Unbounded-Bold';
-    src: url('/fonts/Unbounded-Bold.ttf') format('truetype');
+    src: url('fonts/Unbounded-Bold.ttf') format('truetype');
     font-weight: 600;
 }
 
@@ -144,7 +144,7 @@ body {
 
 .logo img {
     width: 100%;
-    height: clamp(110px, 10vw, 125px);/*  8rem*/
+    max-height:8rem;/*  8rem*/
     transition: all 0.3s ease; /* Плавное изменение размера логотипа */
     margin-left: 0%;
     margin-top: 3rem;
@@ -156,6 +156,8 @@ body {
     align-items: flex-end;
     margin-top: 2rem;
     margin-right: -1rem;
+    max-height:8rem;
+
 }
 
 .menu-row {
@@ -168,7 +170,7 @@ body {
     font-family: 'Montserrat Semi Bold', sans-serif;
     font-size: clamp(5px, 2vw, 25px);
     /*font-size: var(--font-size-small);*/
-    line-height: 3rem;
+   
     text-decoration: none;
     color: #000000;
     margin-left: 1.25rem; /* 20px в rem */
@@ -191,7 +193,7 @@ body {
 
 .analytics-title {
     /* font-size: 3.92rem;*/
-    font-size: clamp(2rem, 5vw, 3.85rem);
+    font-size: clamp(1.5rem, 5vw, 3.85rem);
     font-family: 'Unbounded-Bold', sans-serif;
     white-space: nowrap; 
     background: rgb(163,198,38);
@@ -579,7 +581,7 @@ margin-right: 5%;
 .get-grand 
 {
     font-size: clamp(0.8rem, 2vw, 1.8rem);
-    padding-left: 10%;
+    padding-left: 3%;
     white-space: nowrap;   
     text-align: left;
 }
@@ -813,4 +815,90 @@ svg {
     width: 100%;
     height: 100%;
    /* transform: scale(-1, 1); /* Отражение по горизонтали */
+}
+
+
+
+
+/* NEW CODE */
+
+
+
+/* Контейнер для блоков */
+.bloc-analytics-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Чтобы блоки располагались вертикально */
+    height: 10%; /* Высота экрана */
+    padding: 20px;
+    box-sizing: border-box; /* Учитывает padding в общих размерах */
+    margin-bottom: 2%;
+}
+
+/* Контейнер для колонок */
+.get-bloc-container {
+    display: flex;
+    flex-direction: row; /* Колонки будут располагаться горизонтально */
+    flex-wrap: wrap; /* Чтобы колонки могли переноситься на новую строку */
+    gap: 10%;
+    width: 100%;
+    max-width: 1050px; /* Максимальная ширина для контейнера */
+}
+
+/* Стили для колонок */
+.gets-column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1; /* Чтобы колонки занимали равное пространство */
+    max-width: 100%; /* Чтобы колонки не превышали ширину контейнера */
+}
+
+/* Стили для блоков */
+.gets-box{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 10vh; /* Высота в зависимости от высоты экрана */
+    padding: 20px;
+    margin: 0;
+    text-align: left;
+    font-family: 'Montserrat-ExtraBold', sans-serif;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    background: rgb(163,198,38);
+    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%); /* Градиент */
+    transition: background 0.3s ease;
+    position: relative;
+    line-height: 1;
+    flex: 1; /* Чтобы блоки занимали равное пространство */
+}
+
+/* Изображения внутри блоков */
+.gets-box img {
+    position: absolute;
+    right: 0;
+    margin-top: 1%;
+    margin-right: 5%;
+    width: clamp(20%, 2.7vw, 40%);
+}
+
+/* Стили для состояния при наведении */
+.gets-box:hover {
+    background: linear-gradient(45deg, #4ca2af, #c4e0e5); /* Градиент при наведении */
+}
+
+/* Стили для текста в блоках */
+.gets-grand {
+    font-size: clamp(0.6rem, 2vw, 1.5rem);
+    padding-left: 10%;
+    white-space: nowrap;   
+    text-align: left;
+}
+
+.gets-small {
+    font-size: clamp(0.223rem, 1vw, 0.86rem);
+    white-space: nowrap;
 }
