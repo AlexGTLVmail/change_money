@@ -27,7 +27,7 @@
             <div class="new-additional-block">
                 <div class="new-additional">
         
-                        <a href="#" class="add addphone">
+                        <a href="tel:+79213328730" class="add addphone">
                             <img src="imgs/fone.png" alt="Телефон">
                                 <span class="addtext">+7&nbsp921&nbsp332&nbsp87&nbsp30</span>
                             
@@ -51,6 +51,28 @@
                         </a>
                 </div>
             </div>
+            <button id="openFormBtn">Открыть форму</button>
+
+  <!---Скрытая форма -->
+
+  <div id="overlay"></div>
+<div id="contactForm">
+    <h2>Форма обратной связи</h2>
+    <form id="form">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="phone">Телефон:</label><br>
+        <input type="text" id="phone" name="phone" required><br>
+        <label for="company">Компания:</label><br>
+        <input type="text" id="company" name="company" required><br><br>
+        <label for="time">Удобное время для связи:</label><br>
+        <input type="text" id="time" name="time" name="time" required><br><br>
+        <button type="button" onclick="sendToWhatsApp()">Отправить</button>
+        <button type="button" onclick="closeForm()">Закрыть</button>
+    </form>
+</div>
+
+
 
             <!--- Шапка сайта -->
             <div class="header">
@@ -132,19 +154,19 @@
 
                     <div class="text-one">
                         <div class="m-row-one">
-                            <p class="grand">Есть желание развиваться-</p>
+                            <p class="grand">Есть желание развиваться&nbsp-</p>
                                 <p class="small">  нет понимания, как вести бизнес</p>
                         </div>
                         <div class="qsign">
                             <img src="imgs/qsign.png" alt="">
                         </div>
                     </div>
-                                        <span class="highlight">МЫ ПОМОЖЕМ</span>
-                                        <div class="custom-block-qsign">      
-                                            <img src="imgs/peapleicon.png" alt="Логотип 1" class="left-logo">
-                                            <span class="block-text-highlight">НАСТРОИТЬ<br>БИЗНЕС-ПРОЦЕССЫ<br>НА СТАРТЕ</span>
-                                            <img src="imgs/mechicon.png" alt="Логотип 2" class="right-logo">
-                                        </div>
+                        <span class="highlight">МЫ ПОМОЖЕМ</span>
+                            <div class="custom-block-qsign">      
+                                <img src="imgs/peapleicon.png" alt="Логотип 1" class="left-logo">
+                                <span class="block-text-highlight">НАСТРОИТЬ<br>БИЗНЕС-ПРОЦЕССЫ<br>НА СТАРТЕ</span>
+                                <img src="imgs/mechicon.png" alt="Логотип 2" class="right-logo">
+                            </div>
                     <div class="text-one">
                         <div class="m-row-one">
                             <p class="small">Бизнес есть - нет прибыли</p>
@@ -345,54 +367,28 @@
   
 
 
-
-        <div class="block-analytics-container">  <!--body-->
-            <div class="bubble-container"> 
-                <div class="svg-playground">
-                    <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <marker id="fun-arrowhead" markerWidth="6" markerHeight="4" refX="0" refY="2" orient="auto">
-                                <polygon points="0 0, 6 2, 0 4" fill="black" />
-                            </marker>
-                        </defs>
-                        <path d="M 20 50 L 280 50" 
-                              stroke="black" 
-                              stroke-width="2" 
-                              fill="none" 
-                              stroke-dasharray="5,5" 
-                              marker-end="url(#fun-arrowhead)" />
-                    </svg>
+<!-- 
+        <div class="block-analytics-container">  
+            <div class="work-stages">
+                <div class="arrow-cont">    
+                    <div class="box stages1"><img src="imgs/arrow/arrow1.png" alt=""><span class="arrowspan"><h2>ЗАЯВКА</h2>
+                    <p>Вы оставляете заявку, и<br>мы связываемся с вами</p></span></div>
+                    <div class="box stages4"><img src="imgs/arrow/arrow4.png" alt=""><span class="arrowspan"><h2>СБОР ИНФОРМАЦИИ</h2>
+                        <p>Собираем информацию,<br>выстраиваем систему<br>учета и финансовую модель</p></span></div>
+                    <div class="box stages5"><img src="elizium_tsirk_uzhasov_photo1.jpg" alt="">o s </div>
                 </div>
-      
-                
-
-                
-
-                <div class="svg-playground">
-                    <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <marker id="fun-arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
-                                <polygon points="0 0, 6 2, 0 4" fill="black" />
-                            </marker>
-                        </defs>
-                        <path d="M 50 150
-                                 L 150 150
-                                 A 70 50 0 0 1 200 200
-                                 L 200 300
-                                 A 5 5 0 0 1 195 305
-                                 L 185 305" 
-                              stroke="black" 
-                              stroke-width="2" 
-                              fill="none" 
-                              stroke-dasharray="5,5" 
-                              marker-end="url(#fun-arrowhead)" />
-                    </svg>
-                </div>
+          
+            <div class="arrow-cont">
+                <div class="box stages2"><img src="imgs/arrow/arrow2.png" alt=""><span class="arrowspan"><h2>КОНСУЛЬТАЦИЯ</h2>
+                    <p>Проводим первичную<br>консультацию и<br>и определяем задачи</p></span></div>
+                <div class="box stages3"><img src="imgs/arrow/arrow3.png" alt=""><span class="arrowspan"><h2>ДОГОВОР</h2>
+                    <p>Проводим первичную<br>консультацию и<br>определяем задачи</p></span></div>
+                <div class="box stages7">Контент 6</div>
             </div>
-  
+        </div>
         </div>
 
-
+ -->
 
 
 
@@ -475,52 +471,9 @@
     </div>
 
 
-<!-- ЧТО ВЫ ПОЛУЧИТЕ СТАРЫЕНкнопки 
+<!-- ЧТО ВЫ ПОЛУЧИТЕ СТАРЫЕНкнопки -->
 
 
-    <div class="block-analytics-container">
-        <div class="get-block-container">
-            <div class="get-column">
-                <a href="#" class="get-box"> 
-
-                            <p class="get-grand">Отчет о  движении <br>денежных средств</p>
-                            <img src="imgs/iconODDS.png" alt="Рост прибыли вашей компании">  
-                </a>
-
-                <a href="#" class="get-box">                            
-                            <p class="get-grand">Отчет о прибылях<br> и убытках(ОПиУ)</p>
-                            <img src="imgs/iconOPiU.png" alt="Увеличение баланса и оборота">
-                </a>
-
-                <a href="#" class="get-box">
-
-                    <p class="get-grand">Управленческий <br> баланс</p> 
-                    <img src="imgs/iconUpravBalans.png" alt="Эффективный тайм-менеджмент">
-                
-                </a>
-            </div>
-            <div class="get-column">
-                <a href="#" class="get-box">
-                    <p class="get-grand">ABC<br>анализ</p>
-                    <img src="imgs/iconABC.png" alt="Аналитика финансовой структуры компании"> 
-                   
-                </a>
-
-                <a href="#" class="get-box">
-                    <p class="get-grand">Финансовая<br>модель</p>
-                    <img src="imgs/iconfinans.png" alt="Сделать отчет ДДС"> 
-
-                </a>
-                <a href="#" class="get-box">
-                
-                    <p class="get-grand">UNIT<br>экономика</p>
-                    <img src="imgs/iсonUNIT.png" alt="Собрать базу данных клиентов"> 
-                </a>
-            </div>
-        -->
-
-        </div>
-    </div>
     <div class="get">
         <div class="get-container">
             <a href="#" class="get-block"><p class="button-big">ОСТАВЬТЕ&nbsp&nbspЗАЯВКУ</p> <p class="button-small">И&nbsp&nbspПОЛУЧИТЕ&nbsp&nbspСКИДКУ</p></a>
@@ -561,6 +514,33 @@
         
         
     </div>
+
+
+
+
+    <script>
+        document.getElementById('openFormBtn').addEventListener('click', function () {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('contactForm').style.display = 'block';
+        });
+    
+        function closeForm() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('contactForm').style.display = 'none';
+        }
+    
+        function sendToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('company').value;
+            const time = document.getElementById('time').value;
+            const message = `Здравствуйте! Прошу связаться:\nИмя: ${name}\nТелефон: ${phone}\nКомпания: ${company}\nУдобное время для связи: ${time}`;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=79286642202&text=${encodeURIComponent(message)}`;
+    
+            window.open(whatsappUrl, '_blank');
+            closeForm(); // Закрываем форму после отправки
+        }
+    </script>
 
     
 
